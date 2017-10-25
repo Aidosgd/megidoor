@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use App\Models\Door;
+use App\Models\Slider;
 use Illuminate\Http\Request;
 use Illuminate\Mail\Mailer;
 use Mail;
@@ -31,7 +32,9 @@ class HomeController extends Controller
     {
         $doors = Door::where('main_page', 1)->where('active', 1)->get();
 
-        return view('welcome', compact('doors'));
+        $sliders = Slider::get();
+
+        return view('welcome', compact('doors', 'sliders'));
     }
 
     public function mail(Request $request, Mailer $mailer)

@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    $('.welcome-slider').slick();
     $('.subnav1 .menu-cat').hover(function(){
         $(this).find('ul').stop(true).slideDown(200);
     }, function(){

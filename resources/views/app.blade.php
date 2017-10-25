@@ -20,103 +20,66 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
     @yield('head')
 </head>
-<body>
-<div class="container">
-    @include('parts.header')
+<body id="ot-body" class="isHomePage brown left-content-right">
+    <div class="ot-wrap">
+        <div class="ot-wrap-i">
+            @include('parts.header')
 
-    <div class="content">
-        @yield('content')
+
+            <!--******************** START MAINBODY ********************-->
+                <div class="ot-mainbody">
+                    <div class="ot-widthTemp">
+                        <div class="ot-widthTemp-i">
+                            <!--******************** START TOP-EXTEND ********************-->
+                            <div class="ot-top-extend">
+                                <div class="ot-top-extend-i">
+                                    <div class="otModule module" style="float: left">
+                                        <ul class="menu level0">
+                                            <li style="display: inline-block; font-size: 18px;" id="item-510" class="level0">
+                                                <a href="/">
+                                                    <span>Главная</span>
+                                                </a>
+                                            </li>
+                                            <li style="display: inline-block; font-size: 18px;" id="item-521" class="level0">
+                                                <a href="/index.php/shop-store/metallicheskie-dveri">
+                                                    <span>Металлические двери</span>
+                                                </a>
+                                            </li>
+                                            <li style="display: inline-block; font-size: 18px;" id="item-512" class="level0  last">
+                                                <a href="/index.php/shop-store/mezhkomnatnye-dveri">
+                                                    <span>Межкомнатные двери</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="otModule module floatright">
+                                        <div class="otModule-i">
+                                            <div class="otModuleContent-i clearfix">
+                                                <form class="default-search" action="/index.php" method="post">
+                                                    <div class="search">
+                                                        <input name="searchword" id="mod-search-searchword" maxlength="20" class="inputbox" type="text" size="20" value="Поиск..." onblur="if (this.value=='') this.value='Поиск...';" onfocus="if (this.value=='Поиск...') this.value='';"><input type="image" value="Искать" class="button" src="/css/images/search-btn.png" onclick="this.form.searchword.focus();">	<input type="hidden" name="task" value="search">
+                                                        <input type="hidden" name="option" value="com_search">
+                                                        <input type="hidden" name="Itemid" value="435">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!--******************** END TOP-EXTEND ********************-->
+                            @yield('content')
+                        </div>
+                    </div>
+                </div>
+                <!--******************** END MAINBODY********************-->
+
+            @include('parts.footer')
+        </div>
     </div>
-
-    @include('parts.footer')
-
-    <script  src="/js/all.js"></script>
-    @yield('scripts')
-    <!--scripts-->
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-72113909-1', 'auto');
-        ga('send', 'pageview');
-    </script>
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function (d, w, c) {
-            (w[c] = w[c] || []).push(function() {
-                try {
-                    w.yaCounter26941914 = new Ya.Metrika({id:26941914,
-                        webvisor:true,
-                        clickmap:true,
-                        trackLinks:true,
-                        accurateTrackBounce:true});
-                } catch(e) { }
-            });
-            var n = d.getElementsByTagName("script")[0],
-                s = d.createElement("script"),
-                f = function () { n.parentNode.insertBefore(s, n); };
-            s.type = "text/javascript";
-            s.async = true;
-            s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
-            if (w.opera == "[object Opera]") {
-                d.addEventListener("DOMContentLoaded", f, false);
-            } else { f(); }
-        })(document, window, "yandex_metrika_callbacks");
-    </script>
-    <noscript><div><img src="//mc.yandex.ru/watch/26941914" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
-    <!-- Optional -->
-    <!-- {literal} -->
-    <script type='text/javascript'>
-        window['liv'+'eT'+'e'+'x'] = true,
-            window['live'+'T'+'e'+'xI'+'D'] = 82515,
-            window['li'+'veTex'+'_obj'+'ect'] = true;
-        (function() {
-            var t = document['creat'+'eE'+'lem'+'ent']('script');
-            t.type ='text/javascript';
-            t.async = true;
-            t.src = '//'+'c'+'s15'+'.li'+'v'+'e'+'te'+'x'+'.'+'ru/js/clien'+'t.js';
-            var c = document['getElemen'+'tsByTagNa'+'me']('script')[0];
-            if ( c ) c['paren'+'t'+'No'+'de']['i'+'nser'+'tBefo'+'re'](t, c);
-            else document['doc'+'um'+'entEle'+'m'+'ent']['f'+'irst'+'Chi'+'ld']['a'+'ppen'+'dChil'+'d'](t);
-        })();
-    </script>
-    <!-- {/literal} -->
-    <!-- end footer -->
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function(d, w, c) {
-            (w[c] = w[c] || []).push(function() {
-                try {
-                    w.yaCounter34783985 = new Ya.Metrika({
-                        id: 34783985,
-                        clickmap: true,
-                        trackLinks: true,
-                        accurateTrackBounce: true
-                    });
-                } catch (e) {}
-            });
-            var n = d.getElementsByTagName("script")[0],
-                s = d.createElement("script"),
-                f = function() {
-                    n.parentNode.insertBefore(s, n);
-                };
-            s.type = "text/javascript";
-            s.async = true;
-            s.src = "https://mc.yandex.ru/metrika/watch.js";
-            if (w.opera == "[object Opera]") {
-                d.addEventListener("DOMContentLoaded", f, false);
-            } else {
-                f();
-            }
-        })(document, window, "yandex_metrika_callbacks");
-    </script>
-    <noscript>
-        <div><img src="https://mc.yandex.ru/watch/34783985" style="position:absolute; left:-9999px;" alt="" /></div>
-    </noscript>
-    <!-- /Yandex.Metrika counter -->
-</div>
-
+    <div style="clear: both;"></div>
+    <script src="/js/all.js"></script>
 </body>
+
 </html>

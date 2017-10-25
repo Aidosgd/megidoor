@@ -25,15 +25,8 @@ elixir(function(mix) {
     // mix.stylus('style.styl');
     mix.styles([
         './bower_components/font-awesome/css/font-awesome.css',
-        './bower_components/bootstrap/dist/css/bootstrap.css',
-        // './bower_components/owl.carousel/index.css',
-        // './bower_components/owl.theme/index.css',
-        // './bower_components/style.default/index.css',
+        // './bower_components/bootstrap/dist/css/bootstrap.css',
         './bower_components/jquery-colorbox/example1/colorbox.css',
-        './resources/assets/sass/plugins/catalog-style.css',
-        './resources/assets/sass/plugins/shadowbox.css',
-        './resources/assets/sass/plugins/slick.css',
-        './resources/assets/sass/plugins/style.css',
         './public/css/main.css',
     ], 'public/css/all.css');
     mix.copy('./resources/assets/images/**.*', 'public/css/images');
@@ -59,6 +52,6 @@ elixir(function(mix) {
     mix.copy('./bower_components/AdminLTE/dist/img/**.*', 'public/admin/css/images');
 
     mix.browserSync({
-        proxy: 'rd-new.dev'
+        proxy: 'megidoor.dev'
     });
 });
