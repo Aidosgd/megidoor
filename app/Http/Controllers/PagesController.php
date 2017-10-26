@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use App\Models\Door;
+use App\Models\News;
 use App\Models\Page;
 
 class PagesController extends Controller
@@ -28,9 +29,17 @@ class PagesController extends Controller
 
     public function allNews()
     {
-        $news = Page::where('seo_keywords', 'news')
-            ->get();
+        $news = News::get();
 
         return view('pages.news', compact('news'));
+    }
+
+    public function newsShow($pageName)
+    {
+        $seo_title = $pageName->seo_title;
+        $seo_keywords = $pageName->seo_keywords;
+        $seo_description = $pageName->seo_description;
+
+        return view('pages.show', compact('pageName', 'seo_title', 'seo_keywords', 'seo_description'));
     }
 }

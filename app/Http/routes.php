@@ -30,8 +30,12 @@ Route::get('doors/{doorCategory}/n/{doorSlug}', 'DoorsController@show');
 Route::bind('pageName', function($value){
     return \App\Models\Page::where('slug', '=', $value)->first();
 });
-Route::get('news.php', 'PagesController@allNews');
-Route::get('pages/news.php', 'PagesController@allNews');
+Route::bind('newsName', function($value){
+    return \App\Models\News::where('slug', '=', $value)->first();
+});
+Route::get('news', 'PagesController@allNews');
+Route::get('news/{newsName}', 'PagesController@newsShow');
+Route::get('pages/news', 'PagesController@allNews');
 Route::get('скидки-на-двери1.php', function (){
     $pageName = \App\Models\Page::find(30);
     $seo_title = $pageName->seo_title;
@@ -160,7 +164,7 @@ Route::get('распродажа.php', function (){
 });
 
 Route::get('pages/interior_door.php', 'PagesController@interior');
-Route::get('pages/{pageName}.php', 'PagesController@show');
+Route::get('pages/{pageName}', 'PagesController@show');
 
 View::composer('parts.header', function($view){
     $menu = \App\Models\Menu::get();

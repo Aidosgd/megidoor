@@ -41,12 +41,12 @@
                                                 </a>
                                             </li>
                                             <li style="display: inline-block; font-size: 18px;" id="item-521" class="level0">
-                                                <a href="/index.php/shop-store/metallicheskie-dveri">
+                                                <a href="/doors/metalicheskie-dveri/">
                                                     <span>Металлические двери</span>
                                                 </a>
                                             </li>
                                             <li style="display: inline-block; font-size: 18px;" id="item-512" class="level0  last">
-                                                <a href="/index.php/shop-store/mezhkomnatnye-dveri">
+                                                <a href="/doors/mezhkomnatnye-dveri/">
                                                     <span>Межкомнатные двери</span>
                                                 </a>
                                             </li>
@@ -69,17 +69,22 @@
                                 </div>
                             </div>
                             <!--******************** END TOP-EXTEND ********************-->
-                            @yield('content')
-                        </div>
-                    </div>
-                </div>
-                <!--******************** END MAINBODY********************-->
+                            <div class="ot-mainbody-i">
+
+                                <!--******************** START TOPBOXES ********************-->
+                                @yield('slider')
+
+                                <!--******************** END TOPBOXES ********************-->
+
+                                @yield('content')
+
 
             @include('parts.footer')
         </div>
     </div>
     <div style="clear: both;"></div>
     <script src="/js/all.js"></script>
+    @yield('scripts')
 </body>
 
 </html>

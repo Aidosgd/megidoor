@@ -13,6 +13,9 @@ Route::group(['prefix' => 'cp'], function($router)
     Route::model('page', 'App\Model\Page');
     Route::resource('pages', 'Admin\PagesController');
 
+    Route::model('news', 'App\Models\News');
+    Route::resource('news', 'Admin\NewsController');
+
     Route::model('slider', 'App\Model\Slider');
     Route::resource('sliders', 'Admin\SlidersController');
 

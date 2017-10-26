@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddPriceToDoorsTable extends Migration
+class CreateSubscribersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,12 @@ class AddPriceToDoorsTable extends Migration
      */
     public function up()
     {
-//        Schema::table('doors', function(Blueprint $table)
-//        {
-//            $table->integer('price');
-//        });
+        Schema::create('subscribers', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -25,9 +27,6 @@ class AddPriceToDoorsTable extends Migration
      */
     public function down()
     {
-//        Schema::table('doors', function(Blueprint $table)
-//        {
-//            $table->dropColumn('price');
-//        });
+        Schema::drop('subscribers');
     }
 }

@@ -33,6 +33,7 @@
                     <li><a href="/cp/menus"><i class="fa fa-circle-o"></i> Меню</a></li>
                     <li><a href="/cp/doors"><i class="fa fa-circle-o"></i> Двери</a></li>
                     <li><a href="/cp/pages"><i class="fa fa-circle-o"></i> Cтраницы</a></li>
+                    <li><a href="/cp/news"><i class="fa fa-circle-o"></i> Новости</a></li>
                     <li><a href="/cp/sliders"><i class="fa fa-circle-o"></i> Слайдер</a></li>
                     <li><a href="/cp/banners"><i class="fa fa-circle-o"></i> Баннер</a></li>
                 </ul>
