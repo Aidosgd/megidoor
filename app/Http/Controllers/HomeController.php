@@ -58,4 +58,15 @@ class HomeController extends Controller
 
         return view('choco', compact('doors'));
     }
+
+    public function search(Request $request)
+    {
+        $query = $request->input('searchword');
+
+        $doors = Door::where('title', 'LIKE', '%' . $query . '%')->get();
+
+        $sliders = Slider::get();
+
+        return view('search', compact('doors', 'sliders'));
+    }
 }

@@ -55,11 +55,16 @@
                                     <div class="otModule module floatright">
                                         <div class="otModule-i">
                                             <div class="otModuleContent-i clearfix">
-                                                <form class="default-search" action="/index.php" method="post">
+                                                <form class="default-search" action="/search" method="get">
                                                     <div class="search">
-                                                        <input name="searchword" id="mod-search-searchword" maxlength="20" class="inputbox" type="text" size="20" value="Поиск..." onblur="if (this.value=='') this.value='Поиск...';" onfocus="if (this.value=='Поиск...') this.value='';"><input type="image" value="Искать" class="button" src="/css/images/search-btn.png" onclick="this.form.searchword.focus();">	<input type="hidden" name="task" value="search">
-                                                        <input type="hidden" name="option" value="com_search">
-                                                        <input type="hidden" name="Itemid" value="435">
+                                                        <input name="searchword"
+                                                               id="mod-search-searchword"
+                                                               maxlength="20"
+                                                               class="inputbox"
+                                                               type="text"
+                                                               size="20"
+                                                               placeholder="Поиск...">
+                                                        <button class="btn"><img src="/css/images/search-btn.png" alt=""></button>
                                                     </div>
                                                 </form>
                                             </div>

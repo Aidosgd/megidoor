@@ -31,7 +31,22 @@
                         <div class="otRounded-i">
                             <div class="otModuleContent-i clearfix">
                                 <ul class="menu level0">
-                                    <li id="item-435" class="current active level0  first"><a href="/"><span>Главная</span></a></li><li id="item-510" class="level0"><a href="/index.php/about-us"><span>Новости</span></a></li><li id="item-521" class="level0"><a href="/index.php/sotrudnichestvo"><span>Сотрудничество</span></a></li><li id="item-511" class="level0"><a href="/index.php/shop-store"><span>Каталог</span></a></li><li id="item-512" class="level0  last"><a href="/index.php/contact"><span>Контакты</span></a></li></ul>                                  </div>
+                                    <li id="item-435" class="current active level0  first">
+                                        <a href="/"><span>Главная</span></a>
+                                    </li>
+                                    <li id="item-510" class="level0">
+                                        <a href="/pages/news"><span>Новости</span></a>
+                                    </li>
+                                    <li id="item-521" class="level0">
+                                        <a href="/pages/sotrudnichestvo"><span>Сотрудничество</span></a>
+                                    </li>
+                                    <li id="item-511" class="level0">
+                                        <a href="/doors/metalicheskie-dveri/"><span>Каталог</span></a>
+                                    </li>
+                                    <li id="item-512" class="level0  last">
+                                        <a href="/pages/kontakty"><span>Контакты</span></a>
+                                    </li>
+                                </ul>                                  </div>
                         </div>
                     </div>
                 </div>

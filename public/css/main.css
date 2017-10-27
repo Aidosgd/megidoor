@@ -6195,6 +6195,12 @@ div.ot-logo a.logo {
 .doors .shk-item {
   text-align: center; }
 
+.search input {
+  margin: 4px 0; }
+
+.search .btn {
+  background: transparent; }
+
 @media (max-width: 768px) {
   .container {
     width: 100%; }

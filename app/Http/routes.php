@@ -189,6 +189,8 @@ Route::post('mail', 'HomeController@mail');
 
 Route::get('choco', 'HomeController@choco');
 
+Route::get('search', 'HomeController@search');
+
 //Admin
 Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function(){
     require_once "routes._admin.php";

@@ -116,6 +116,14 @@ div.ot-logo a.logo{
   }
 }
 
+.search{
+  input{
+    margin: 4px 0;
+  }
+  .btn{
+    background: transparent;
+  }
+}
 @media (max-width: 768px) {
   .container{
     width: 100%;
