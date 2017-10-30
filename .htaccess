@@ -2,5 +2,8 @@
 RewriteEngine on
 RewriteCond %{REQUEST_URI} !^public
 RewriteRule ^(.*)$ public/$1 [L]
+
+Redirect /index.php/shop-store/mezhkomnatnye-dveri /doors/mezhkomnatnye-dveri
+Redirect /index.php/shop-store/metallicheskie-dveri /doors/metalicheskie-dveri
 </IfModule>
 

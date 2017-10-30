@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use App\Models\Door;
 use App\Models\Slider;
+use App\Models\Subscribers;
 use Illuminate\Http\Request;
 use Illuminate\Mail\Mailer;
 use Mail;
@@ -68,5 +69,26 @@ class HomeController extends Controller
         $sliders = Slider::get();
 
         return view('search', compact('doors', 'sliders'));
+    }
+
+    public function subscribers(Request $request, Mailer $mailer)
+    {
+        $this->validate($request, [
+            'email' => 'required|email|unique:subscribers',
+        ]);
+
+        $order = new Subscribers;
+
+        $order->fill($request->input());
+
+        $order->save();
+
+//        $emails = ['aidosgd@gmail.com', 'info@perspectiva-lombard.kz'];
+//        $mailer->send('emails.subs', ['email' => $request->input('email')], function ($m) use ($emails) {
+//            $m->from('info@perspectiva-lombard.kz', 'Заявка на товар');
+//            $m->to($emails, 'Aidos')->subject('Новый подписчик');
+//        });
+
+        return redirect('/')->with('message', 'Вы успешно подписались на рассылку.');
     }
 }

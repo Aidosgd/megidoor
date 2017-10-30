@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ isset($seo_title) ? $seo_title : 'Двери Алматы в ассортименте. Российские двери со склада' }}</title>
-    <meta name="description" content="{{ isset($seo_description) ? $seo_description : 'Широкий выбор дверей: межкомнатные двери, металлические двери со склада оптом.' }}">
-    <meta name="keywords" content="{{ isset($seo_keywords) ? $seo_keywords : 'интернет, магазин, дверей, в, Алматы' }}">
+    <title>{{ isset($seo_title) ? $seo_title : 'Купить двери в Алматы. Заказать двери оптом в Алматы цена.' }}</title>
+    <meta name="description" content="{{ isset($seo_description) ? $seo_description : 'Купить двери в Алматы недорого. Заказать двери оптом в Алматы цена. Лучший интернет магазин дверей онлайн оплата через карту. ' }}">
+    <meta name="keywords" content="{{ isset($seo_keywords) ? $seo_keywords : 'двери в алматы купить двери цены двери двери на заказ двери оптом двери алматы дешево' }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
     <!-- Bootstrap and Font Awesome css-->

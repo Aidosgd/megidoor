@@ -11,7 +11,15 @@ class DoorsController extends Controller
     {
         $doors = Door::where('doors_category_id', $doorCategory->id)->where('active', 1)->get();
 
-        return view('doors.index', compact('doors', 'doorCategory'));
+        if($doorCategory->id == 1){
+            $seo_title = 'Межкомнатные двери в Алматы. Натуральные деревянные двери в Алматы большой выбор. Купить онлайн недорогие двери межкомнатные в Алматы.';
+            $seo_description = 'Межкомнатные двери в Алматы. Натуральные деревянные двери в Алматы.  Большой выбор, в наличии, описание, фото. Купить онлайн недорогие двери межкомнатные в Алматы.';
+        }else{
+            $seo_title = 'Металлические двери в Алматы. Качественные железные двери в Алматы в наличии. Купить онлайн металлические входные двери в Алматы.';
+            $seo_description = 'Металлические двери в Алматы. Качественные железные двери в Алматы большой выбор, в наличии, описание, фото. Купить онлайн недорогие двери металлические в Алматы. Надежные входные двери в Алма';
+        }
+
+        return view('doors.index', compact('doors', 'doorCategory', 'seo_title', 'seo_description'));
     }
 
     public function show($doorCategory, $doorSlug)

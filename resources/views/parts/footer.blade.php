@@ -65,7 +65,19 @@
                             <div class="otModuleContent-i clearfix">
                                 <div class="custom">
                                     <div style="padding: 5px 0px 10px; font-style: italic;">Вы можете подписаться на наши новости оставив свой электронный адрес.</div>
-                                    <div><form class="newsletter" action="index.php" method="post" accept-charset="utf-8"><input class="email" onfocus="if (this.value=='Введите Ваш Email') this.value='';" onblur="if (this.value=='') this.value='Введите Ваш Email';" type="text" name="email" value="Введите Ваш Email"> <input class="submit" type="submit" value="Подписаться"></form></div></div>
+                                    <div>
+                                        <form class="newsletter" action="/subscribers" method="post">
+                                            {{ csrf_field() }}
+                                            <input class="email" type="email" name="email" placeholder="Введите Ваш Email">
+                                            @if (count($errors) > 0)
+                                                @foreach ($errors->all() as $error)
+                                                    <br> {{ $error }} <br>
+                                                @endforeach
+                                            @endif
+                                            <input class="submit" type="submit" value="Подписаться">
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

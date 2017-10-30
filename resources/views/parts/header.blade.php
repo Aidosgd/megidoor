@@ -35,4 +35,10 @@
         </div>
     </div>
 </div>
+
+@if(session()->has('message'))
+    <div class="alert alert-success">
+        <h1 style="text-align: center">{{ session()->get('message') }}</h1>
+    </div>
+@endif
 <!--******************** END HEADER ********************-->
