@@ -1,2 +1,9 @@
 User-agent: *
-Disallow:
+Disallow: /admin
+Disallow: /assets
+Disallow: /fonts
+Disallow: /uploads
+Disallow: /vendor
+
+
+Sitemap: https://megidoor.kz/sitemap.xml

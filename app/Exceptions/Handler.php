@@ -45,6 +45,17 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {
+		//customize 404 page
+		if ($this->isHttpException($e)) {
+					
+			$statusCode = $e->getStatusCode();
+			
+			switch ($statusCode) {
+				case '404':
+				//путь к файлу с HTML разметкой
+				return response()->view('errors/404', ["error" => $statusCode], 404);
+			}
+		}
         return parent::render($request, $e);
     }
 }

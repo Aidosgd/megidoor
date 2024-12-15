@@ -19,6 +19,24 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
     @yield('head')
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(99087158, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/99087158" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </head>
 <body id="ot-body" class="isHomePage brown left-content-right">
     <div class="ot-wrap">
@@ -35,11 +53,6 @@
                                 <div class="ot-top-extend-i">
                                     <div class="otModule module" style="float: left">
                                         <ul class="menu level0">
-                                            <li style="display: inline-block; font-size: 18px;" id="item-510" class="level0">
-                                                <a href="/">
-                                                    <span>Главная</span>
-                                                </a>
-                                            </li>
                                             <li style="display: inline-block; font-size: 18px;" id="item-521" class="level0">
                                                 <a href="/doors/metalicheskie-dveri/">
                                                     <span>Металлические двери</span>

@@ -44,6 +44,9 @@
                                         <h1 class="product__heading">{{ $door->title }}</h1>
                                         <h4>Описание</h4>
                                         {!! $door->description !!}
+
+                                        <h4>Цена:</h4>
+                                        <h4>{{ $door->price }} тенге {{$door->category->id == 1 ? 'цена за комплект' : ''}}</h4>
                                     </div>
                                 </div>
                             </div>
@@ -56,6 +59,6 @@
 @endsection
 @section('scripts')
     <script>
-        $(".image_js").colorbox({rel:'image_js'});
+        $(".image_js").colorbox({rel:'image_js', width: '500px'});
     </script>
 @endsection

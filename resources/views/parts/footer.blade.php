@@ -1,4 +1,4 @@
-<!--******************** START BOTTOMBOXES ********************-->
+	<!--******************** START BOTTOMBOXES ********************-->
 <div class="ot-bottomboxes" id="ot-bottomboxes">
     <div class="ot-bottomboxes-i" id="ot-bottomboxes-i">
         <div class="bottom-box bottom-box-1 firstbox width25">
@@ -11,8 +11,8 @@
                         <div class="otRounded-i">
                             <div class="otModuleContent-i clearfix">
                                 <div class="custom">
-                                    <div style="padding: 10px 0; font-style: italic;">Компания "МегиDOOR" Алматы существует на рынке Казахстана с 2001 года и является одним из крупнейших импортеров межкомнатных и входных дверей производства России и Беллорусии.</div>
-                                    <p><a class="readmore" href="#">Подробнее</a></p></div>
+                                    <div style="padding: 10px 0; font-style: italic;">Компания Новые Двери существует на рынке Казахстана с 2012 года и является одним из крупнейших импортеров межкомнатных и входных дверей производства России и Белоруссии.</div>
+                                    <p><a class="readmore" href="/pages/o_nas">Подробнее</a></p></div>
                             </div>
                         </div>
                     </div>
@@ -155,4 +155,31 @@
         </div>
     </div>
 </div>
+
+    <script type="text/javascript">
+    var yaParams = {};
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'http://ip.up66.ru/', true);
+    xhr.onload = function() {
+    	
+    	yaParams.ip = this.responseText;
+    }
+    xhr.send();
+    </script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(31758386, "init", {
+        params:window.yaParams,
+		clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/31758386" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 <!--******************** END FOOTER ********************-->
